@@ -1,0 +1,13 @@
+<div>
+  <form [fromGroup]="todoForm" (submit)="onSubmit()">
+    <button>Add Item</button><br/>
+  </form>
+
+  <p>
+    {{singleTodo$ | async | json}}
+  </p>
+
+  <div *ngFor="let todo of todo$ | async">
+    {{todo.value}}<button (click)="deleteTodo(todo.id)">x</button>
+  </div>
+</div>

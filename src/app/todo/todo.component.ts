@@ -39,4 +39,8 @@ export class TodoComponent implements OnInit {
       value: this.todoForm.controls.todo.value
     } as ToDo);
   }
+
+  deleteTodo(todoId: number ) {
+    this.todoService.remove(todoId);
+  }
 }

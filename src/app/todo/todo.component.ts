@@ -40,7 +40,7 @@ export class TodoComponent implements OnInit {
     } as ToDo);
   }
 
-  deleteTodo(todoId: number ) {
+  deleteTodo(todoId: number) {
     this.todoService.remove(todoId);
   }
 }
